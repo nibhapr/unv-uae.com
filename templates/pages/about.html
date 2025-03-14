@@ -3,61 +3,115 @@
 
 {% block title %}UNV Security Cameras Dubai | Professional CCTV Installation & Solutions{% endblock %}
 {% block meta_description %}Leading provider of UNV cameras and CCTV systems in Dubai. Expert installation of security cameras, IP cameras, and NVR systems with 24/7 support. Best security camera prices in UAE.{% endblock %}
+{% block meta_keywords %}unv camera dubai, cctv installation dubai, unv security cameras, unv ip camera, unv nvr system, uniview camera, security camera maintenance dubai{% endblock %}
+{% block og_title %}UNV Security Cameras Dubai | Professional CCTV Installation{% endblock %}
+{% block og_description %}Leading provider of UNV cameras and CCTV systems in Dubai. Expert installation of security cameras, IP cameras, and NVR systems with 24/7 support.{% endblock %}
+{% block og_image %}{% static 'images/about-og-image.jpg' %}{% endblock %}
+{% block schema_url %}{% url 'pages:about' %}{% endblock %}
 
-<!-- SEO Meta Tags -->
-<meta name="keywords" content="unv camera dubai, cctv installation dubai, unv security cameras, unv ip camera, unv nvr system, uniview camera, security camera maintenance dubai, cctv dubai, network video recorder, professional surveillance solutions">
-<meta name="author" content="Digital Link - Official UNV Partner Dubai">
+{% block head %}
+{{ block.super }}
+{# SEO Meta Tags - Comprehensive and Optimized #}
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="keywords" content="unv camera dubai, cctv installation dubai, unv security cameras, unv ip camera, unv nvr system, uniview camera, security camera maintenance dubai, cctv dubai, network video recorder, professional surveillance solutions, AIoT solutions, video surveillance, smart technology, Middle East">
+<meta name="author" content="Digital Link - Official UNV Partner Dubai">
+<meta name="language" content="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#006666">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
+<meta name="geo.position" content="25.276987;55.296249">
+<meta name="ICBM" content="25.276987, 55.296249">
+<meta name="google" content="notranslate">
 
-<!-- Open Graph / Social Media -->
+{# Performance optimizations #}
+<link rel="preload" href="{% static 'images/about/5.webp' %}" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="{% static 'images/about/1.webp' %}" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="{% static 'fonts/your-main-font.woff2' %}" as="font" type="font/woff2" crossorigin>
+<link rel="dns-prefetch" href="//www.youtube.com">
+<link rel="preconnect" href="https://www.youtube.com">
+<link rel="dns-prefetch" href="//www.digitallink.ae">
+<link rel="preconnect" href="https://www.digitallink.ae">
+
+{# Open Graph / Social Media #}
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="UNV Security Cameras Dubai | Professional CCTV Installation">
 <meta property="og:description" content="Leading provider of UNV cameras and CCTV systems in Dubai. Expert installation of security cameras, IP cameras, and NVR systems with 24/7 support.">
 <meta property="og:image" content="{% static 'images/about-og-image.jpg' %}">
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
 <meta property="og:site_name" content="Digital Link Technology LLC">
+<meta property="og:locale" content="en_AE">
+<meta property="og:email" content="sales1@digitallink.ae">
+<meta property="og:phone_number" content="+971509162488">
+<meta property="og:street-address" content="Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira">
+<meta property="og:locality" content="Dubai">
+<meta property="og:region" content="Dubai">
+<meta property="og:postal-code" content="123421">
+<meta property="og:country-name" content="UAE">
 
-<!-- Twitter Card -->
+{# Twitter Card #}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="UNV Security Cameras Dubai | Professional CCTV Installation">
 <meta name="twitter:description" content="Leading provider of UNV cameras and CCTV systems in Dubai. Expert installation of security cameras, IP cameras, and NVR systems with 24/7 support.">
 <meta name="twitter:image" content="{% static 'images/about-og-image.jpg' %}">
 
-<!-- Location and Regional Meta Tags -->
-<meta name="geo.region" content="AE-DU">
-<meta name="geo.placename" content="Dubai">
-<meta name="geo.position" content="25.276987;55.296249">
-<meta name="ICBM" content="25.276987, 55.296249">
-
-<!-- Performance & Best Practices -->
-<link rel="dns-prefetch" href="//www.youtube.com">
-<link rel="preconnect" href="https://www.youtube.com">
+{# Performance & Security Headers #}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+<meta http-equiv="Content-Security-Policy" 
+  content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; connect-src 'self';">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
 
-<!-- Accessibility -->
+{# Accessibility #}
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="UNV Dubai">
+<meta name="application-name" content="UNV Dubai">
 <link rel="alternate" href="{{ request.build_absolute_uri }}" hreflang="x-default">
 <link rel="canonical" href="{{ request.build_absolute_uri }}">
+{% endblock %}
 
-<!-- Add preload for critical resources -->
-<link rel="preload" href="{% static 'images/about/5.webp' %}" as="image" type="image/webp">
-<link rel="preload" href="{% static 'images/about/1.webp' %}" as="image" type="image/webp">
-<link rel="preload" href="{% static 'fonts/your-main-font.woff2' %}" as="font" type="font/woff2" crossorigin>
-
-<!-- Schema Markup -->
+{% block content %}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
-  "@type": "SecuritySystem",
+  "@type": "Organization",
+  "@id": "https://www.unv-uae.com/#organization",
   "name": "Digital Link - Official UNV Partner Dubai",
+  "url": "https://www.unv-uae.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.unv-uae.com/static/images/logo/logo.svg",
+    "width": "180",
+    "height": "60"
+  },
+  "keywords": {
+    "@type": "keywords",
+    "keyword": [
+      "uniview dubai",
+      "uniview uae",
+      "uniview security cameras dubai",
+      "uniview cctv dubai",
+      "uniview security systems dubai",
+      "uniview security solutions dubai",
+      "unv camera dubai",
+      "cctv installation dubai",
+      "unv security cameras",
+      "unv ip camera",
+      "unv nvr system",
+      "uniview camera",
+      "security camera maintenance dubai",
+      "cctv dubai",
+      "network video recorder",
+      "professional surveillance solutions",
+      "AIoT solutions",
+      "video surveillance",
+      "smart technology",
+      "Middle East"
+    ]
+  },
   "description": "Dubai's premier provider of UNV security cameras and CCTV systems. Professional installation, maintenance, and support services for IP cameras, NVR systems, and complete surveillance solutions.",
-  "url": "{% url 'pages:about' %}",
-  "logo": "/static/images/logo/logo.svg",
-  "image": [
-    "{% static 'images/about/5.webp' %}",
-    "{% static 'images/about/1.webp' %}"
-  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira",
@@ -132,108 +186,99 @@
         }
       }
     ]
+  },
+  "keywords": "unv camera dubai, cctv installation dubai, unv security cameras, unv ip camera, unv nvr system, uniview camera, security camera maintenance dubai, cctv dubai, network video recorder, AIoT solutions, video surveillance"
+}
+</script>
+
+<!-- About Page Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.unv-uae.com/about/#webpage",
+  "url": "{% url 'pages:about' %}",
+  "name": "UNV Security Cameras Dubai | Professional CCTV Installation & Solutions",
+  "description": "Leading provider of UNV cameras and CCTV systems in Dubai. Expert installation of security cameras, IP cameras, and NVR systems with 24/7 support. Best security camera prices in UAE.",
+  "isPartOf": {
+    "@id": "https://www.unv-uae.com/#website"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "{% static 'images/about-og-image.jpg' %}",
+    "width": "1200",
+    "height": "630"
+  },
+  "datePublished": "2023-01-01T00:00:00+04:00",
+  "dateModified": "{% now 'c' %}",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.unv-uae.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "{% url 'pages:about' %}"
+      }
+    ]
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-title", ".hero-description", ".section-text"]
   }
 }
 </script>
 
-<!-- Add these meta tags after the existing ones -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="theme-color" content="#006666">
-
-<!-- Debug info -->
-<div style="display: none;">
-  Debug:
-  {% if video %}
-  Video exists
-  URL: {{ video.video_url }}
-  Formatted URL: {{ video.formatted_video_url }}
-  {% else %}
-  No video found
-  {% endif %}
-</div>
-
-<!-- Add these meta tags for UAE and Middle Eastern SEO -->
-<meta name="geo.region" content="AE-DU">
-<meta name="geo.placename" content="Dubai">
-<meta name="geo.position" content="25.276987;55.296249">
-<meta name="ICBM" content="25.276987, 55.296249">
-<meta name="keywords"
-  content="AIoT solutions, video surveillance, security cameras, smart technology, Uniview, Dubai, UAE, Middle East, IP cameras, NVR, smart office, smart home, Digital Link">
-<meta name="author" content="Uniview, Digital Link">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="google" content="notranslate">
-<meta name="description"
-  content="Uniview offers innovative AIoT solutions in Dubai, UAE, including video surveillance and smart technology. Contact us for more information.">
-
-<!-- Add structured data for local business -->
+<!-- FAQ Schema for About Page -->
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Digital Link",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira",
-      "addressLocality": "Dubai",
-      "addressRegion": "Dubai",
-      "postalCode": "123421",
-      "addressCountry": "AE"
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is UNV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UNV (Uniview) is a global pioneer in video surveillance and a leading provider of security cameras, NVR systems, and AIoT solutions. As the inventor of the first network video recorder in China, we're committed to technological innovation in video surveillance and smart technology."
+      }
     },
-    "telephone": "+971509162488",
-    "email": "sales1@digitallink.ae",
-    "url": "{% url 'pages:about' %}",
-    "logo": "/static/images/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/digitallinktechnologyllc",
-      "https://www.linkedin.com/company/digital-link-technology-uae/",
-      "https://www.instagram.com/digitallinktechnologyllc"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+971509162488",
-      "contactType": "Customer Support",
-      "areaServed": "AE",
-      "availableLanguage": "Arabic, English"
+    {
+      "@type": "Question",
+      "name": "What products does UNV offer in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UNV offers a complete product line including IP cameras, NVR, encoders, decoders, storage, client software, and AIoT solutions ranging from display, intelligent access control to smart office and smart home technologies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find UNV security cameras in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digital Link Technology LLC is the official UNV partner in Dubai. Visit our showroom at Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira, Dubai to explore our complete range of UNV security products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does UNV provide installation services in Dubai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, through our official partner Digital Link Technology LLC, we provide professional installation, maintenance, and technical support services for all UNV security cameras and systems across Dubai and the UAE."
+      }
     }
-  }
+  ]
+}
 </script>
 
-<!-- Performance & Best Practices -->
-<link rel="dns-prefetch" href="//www.digitallink.ae">
-<link rel="preconnect" href="https://www.digitallink.ae">
-<meta http-equiv="Cache-Control" content="public, max-age=31536000">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Accessibility -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="alternate" href="{{ request.build_absolute_uri }}" hreflang="x-default">
-<link rel="canonical" href="{{ request.build_absolute_uri }}">
-
-<!-- Add focus styles for accessibility -->
-<style>
-  .section-tab:focus,
-  .play-video-btn:focus {
-    outline: 2px solid #006666;
-    outline-offset: 2px;
-  }
-</style>
-
-<!-- Add this debug info temporarily -->
-<div style="display:none">
-  Debug Info:
-  Video URL: {{ video.video_url }}
-  Formatted URL: {{ video.formatted_video_url }}
-</div>
-
-{% block content %}
 <link rel="preload" href="{% static 'images/about/5.webp' %}" as="image">
 <link rel="preload" href="{% static 'images/about/1.webp' %}" as="image">
-
-<meta name="keywords" content="AIoT solutions, video surveillance, security cameras, smart technology, Uniview">
-<meta name="author" content="Uniview">
-<meta name="robots" content="index, follow">
 
 <style>
   /* Hero Section */
@@ -743,13 +788,6 @@
 </section>
 
 <!-- Add other sections similarly -->
-
-<!-- Add this debug info temporarily -->
-<div style="display:none">
-  Debug Info:
-  Video URL: {{ video.video_url }}
-  Formatted URL: {{ video.formatted_video_url }}
-</div>
 
 <!-- Video Modal -->
 <div id="videoModal"

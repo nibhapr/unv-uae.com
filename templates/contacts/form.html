@@ -5,57 +5,76 @@
 {% block title %}Contact Us - Uniview{% endblock %}
 {% block meta_description %}Learn more contact Uniview and our innovative AIoT Contact Us, transforming industries and
 improving lives.{% endblock %}
+{% block meta_keywords %}contact, uniview, aiot, support, customer service, get in touch, Dubai, UAE, Middle East{% endblock %}
+{% block og_title %}Contact Uniview - Get in Touch With Our Team{% endblock %}
+{% block og_description %}Contact Uniview for AIoT solutions in Dubai and the Middle East.{% endblock %}
 {% block og_image %}/static/images/contact-og-image.jpg{% endblock %}
 {% block schema_url %}{% url 'contacts:contacts' %}{% endblock %}
 
-<!-- Add proper meta tags for SEO -->
-{% block extra_meta %}
-<!-- SEO Meta Tags -->
+{% block head %}
+{{ block.super }}
+{# SEO Meta Tags - Comprehensive and Optimized #}
 <meta name="robots" content="index, follow">
-<meta name="keywords"
-    content="contact, uniview, aiot, support, customer service, get in touch, Dubai, UAE, Middle East">
+<meta name="keywords" content="contact, uniview, aiot, support, customer service, get in touch, Dubai, UAE, Middle East, security camera, cctv installation">
 <meta name="author" content="Uniview">
+<meta name="language" content="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="{% url 'contacts:contacts' %}">
+<meta name="theme-color" content="#0088cc">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
+<meta name="geo.position" content="25.2744;55.3009">
+<meta name="ICBM" content="25.2744, 55.3009">
 
-<!-- Open Graph / Social Media Meta Tags -->
+{# Performance optimizations #}
+<link rel="preload" href="{% static 'images/contact/contact-form.webp' %}" as="image" fetchpriority="high">
+
+{# Open Graph Tags for Social Sharing #}
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact Uniview - Get in Touch With Our Team">
 <meta property="og:description" content="Contact Uniview for AIoT solutions in Dubai and the Middle East.">
-<meta property="og:site_name" content="Uniview">
-<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{% static 'images/contact-og-image.jpg' %}">
 <meta property="og:url" content="{% url 'contacts:contacts' %}">
-{% endblock %}
-<meta property="og:image" content="/static/images/contact-og-image.jpg">
+<meta property="og:site_name" content="Uniview">
+<meta property="og:locale" content="en_AE">
+<meta property="og:email" content="sales1@digitallink.ae">
+<meta property="og:phone_number" content="+971509162488">
+<meta property="og:street-address" content="Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira">
+<meta property="og:locality" content="Dubai">
+<meta property="og:region" content="Dubai">
+<meta property="og:postal-code" content="123421">
+<meta property="og:country-name" content="UAE">
 
-<!-- Twitter Card Meta Tags -->
+{# Twitter Card Tags #}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Uniview - Get in Touch With Our Team">
 <meta name="twitter:description" content="Contact Uniview for AIoT solutions in Dubai and the Middle East.">
-<meta name="twitter:image" content="/static/images/contact-og-image.jpg">
+<meta name="twitter:image" content="{% static 'images/contact-og-image.jpg' %}">
 
-<!-- Performance & Security Meta Tags -->
+{# Performance & Security Headers #}
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
-<meta name="format-detection" content="telephone=no">
-<meta name="theme-color" content="#0088cc">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
 
-<!-- Accessibility Meta Tags -->
-<meta name="language" content="English">
-<meta name="accessibility-control" content="fullKeyboardControl">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+{# Accessibility Meta Tags #}
+<meta name="apple-mobile-web-app-title" content="Contact Uniview">
+<meta name="application-name" content="Contact Uniview">
+<link rel="canonical" href="{% url 'contacts:contacts' %}">
 
-<!-- Preconnect to required origins -->
+{# Preconnect to required origins #}
 <link rel="preconnect" href="/" crossorigin>
 <link rel="dns-prefetch" href="/">
 <link rel="preconnect" href="https://www.unv-uae.com" crossorigin>
+{% endblock %}
 
+{% block content %}
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "Organization",
+    "@id": "https://www.unv-uae.com/#organization",
     "name": "Uniview UAE | Contact Form - Uniview | Global AIoT Solutions Provider",
     "url": "https://www.unv-uae.com",
     "logo": "https://www.unv-uae.com/static/images/logo/logo.svg",
@@ -64,7 +83,9 @@ improving lives.{% endblock %}
         "https://www.linkedin.com/company/digital-link-technology-uae/",
         "https://www.instagram.com/digitallinktechnologyllc/",
         "https://www.facebook.com/people/Digital-Link-Technology-LLC/100087290161175/?mibextid=ZbWKwL"
+
     ],
+    "keywords": "uniview, aiot, support, customer service, get in touch, Dubai, UAE, Middle East, security camera, cctv installation",
     "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+971-509162488",
@@ -100,7 +121,53 @@ improving lives.{% endblock %}
     }
 }
 </script>
-{% block content %}
+
+<!-- Contact Form Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.unv-uae.com/contact/form/#webpage",
+    "url": "{% url 'contacts:inquiry_form' %}",
+    "name": "Contact Form - Uniview AIoT Solutions Dubai",
+    "description": "Submit your inquiry to Uniview, leading provider of AIoT solutions in Dubai and UAE. Get in touch with our team for security systems and smart solutions.",
+    "isPartOf": {
+        "@id": "https://www.unv-uae.com/#website"
+    },
+    "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "{% static 'images/contact-og-image.jpg' %}",
+        "width": "1200",
+        "height": "630"
+    },
+    "datePublished": "2023-01-01T00:00:00+04:00",
+    "dateModified": "{% now 'c' %}",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.unv-uae.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "{% url 'contacts:contacts' %}"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Inquiry Form",
+                "item": "{% url 'contacts:inquiry_form' %}"
+            }
+        ]
+    }
+}
+</script>
+
 <div class="form-container">
     {% if messages %}
     {% for message in messages %}

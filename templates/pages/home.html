@@ -1,14 +1,203 @@
 {% extends "base.html" %}
 
-{% block title %}Home - Uniview | Leading AIoT Solutions Provider{% endblock %}
+{% block title %}Uniview UAE - Leading AIoT Security Solutions Provider{% endblock %}
 
-{% block meta_description %}Uniview delivers cutting-edge AIoT security solutions, from smart surveillance to industrial automation, backed by innovative technology. Serving the UAE and Middle Eastern markets.{% endblock %}
+{% block meta_description %}Uniview UAE delivers cutting-edge AIoT security solutions, from smart surveillance to industrial automation. Official distributor serving Dubai, Abu Dhabi, and the Middle East with innovative security technology.{% endblock %}
 
 {% block og_image %}/static/images/about-og-image.jpg{% endblock %}
 {% load static %}
 {% load humanize %}
 
 {% block header %}
+<!-- Primary Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<meta name="theme-color" content="#2a5298" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1e3c72" media="(prefers-color-scheme: dark)">
+
+<!-- SEO Meta Tags -->
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="Uniview UAE, security cameras Dubai, CCTV installation UAE, IP camera systems, NVR solutions, AIoT security, smart surveillance UAE, Uniview distributor Middle East, security solutions Dubai, industrial automation UAE">
+<meta name="author" content="Uniview Technologies">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
+<meta name="geo.position" content="25.2744;55.3009">
+<meta name="ICBM" content="25.2744, 55.3009">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.unv-uae.com">
+<meta property="og:title" content="Uniview UAE - Leading AIoT Security Solutions Provider">
+<meta property="og:description" content="Official Uniview distributor in UAE offering comprehensive security solutions, CCTV systems, and smart surveillance technology. Expert installation and support across Dubai and Middle East.">
+<meta property="og:image" content="https://www.unv-uae.com/static/images/about-og-image.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Uniview UAE">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Uniview UAE - Leading AIoT Security Solutions Provider">
+<meta name="twitter:description" content="Official Uniview distributor in UAE offering comprehensive security solutions, CCTV systems, and smart surveillance technology. Expert installation and support across Dubai and Middle East.">
+<meta name="twitter:image" content="https://www.unv-uae.com/static/images/about-og-image.jpg">
+
+<!-- Schema.org Organization Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.unv-uae.com/#organization",
+  "name": "Uniview UAE",
+  "url": "https://www.unv-uae.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.unv-uae.com/static/images/logo/logo.svg",
+    "width": "180",
+    "height": "60"
+  },
+  "keywords": {
+    "@type": "keywords",
+    "keyword": [
+      "uniview uae",
+      "uniview dubai",
+      "uniview uae security solutions", 
+      "uniview uae security cameras",
+      "uniview uae cctv systems",
+      "uniview uae ip cameras",
+      "uniview uae nvr solutions",
+      "uniview uae aiot security",
+      "uniview uae smart surveillance",
+      "uniview uae industrial automation",
+      "uniview uae smart city solutions",
+      "uniview uae iot integration",
+      "uniview uae security systems",
+      "uniview uae surveillance cameras",
+      "uniview uae security systems dubai",
+      "uniview uae security camera installation",
+      "uniview uae cctv installation",
+      "uniview uae ip camera installation",
+      "uniview uae nvr installation",
+      "uniview uae aiot installation",
+      "uniview uae smart surveillance installation",
+      "uniview uae industrial automation installation",
+      "uniview uae security camera dubai",
+      "uniview uae cctv camera dubai",
+      "uniview uae ip camera dubai",
+      "uniview uae nvr dubai",
+      "uniview uae aiot dubai",
+      "uniview uae smart surveillance dubai",
+      "uniview uae industrial automation dubai",
+      "uniview uae security camera installation dubai",
+      "uniview uae cctv installation dubai",
+      "uniview uae ip camera installation dubai",
+      "uniview uae nvr installation dubai",
+      "uniview uae aiot installation dubai",
+      "uniview uae smart surveillance installation dubai",
+      "uniview uae industrial automation installation dubai",
+      "uniview uae security camera maintenance dubai",
+      "uniview uae cctv maintenance dubai",
+      "uniview uae ip camera maintenance dubai",
+      "uniview uae nvr maintenance dubai",
+      "uniview uae aiot maintenance dubai",
+      "uniview uae smart surveillance maintenance dubai",
+      "uniview uae industrial automation maintenance dubai",
+  },
+
+  "description": "Leading provider of AIoT security solutions in UAE, offering smart surveillance systems, industrial automation, and integrated security solutions.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "postalCode": "123421",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.2744",
+    "longitude": "55.3009"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+971509162488",
+    "contactType": "sales",
+    "email": "sales1@digitallink.ae",
+    "availableLanguage": ["English", "Arabic"],
+    "areaServed": ["AE", "OM", "BH", "SA", "KW", "QA"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/digital-link-technology-uae/",
+    "https://www.instagram.com/digitallinktechnologyllc/",
+    "https://www.facebook.com/people/Digital-Link-Technology-LLC/100087290161175/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "156",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "AED",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+
+<!-- Schema.org WebPage Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.unv-uae.com/#webpage",
+  "url": "https://www.unv-uae.com",
+  "name": "Uniview UAE - Leading AIoT Security Solutions Provider",
+  "description": "Official Uniview distributor in UAE offering comprehensive security solutions, CCTV systems, and smart surveillance technology. Expert installation and support across Dubai and Middle East.",
+  "publisher": {
+    "@id": "https://www.unv-uae.com/#organization"
+  },
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@id": "https://www.unv-uae.com/#website"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://www.unv-uae.com",
+          "name": "Home"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Schema.org LocalBusiness Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.unv-uae.com/#localbusiness",
+  "name": "Uniview UAE",
+  "image": "https://www.unv-uae.com/static/images/logo/logo.svg",
+  "priceRange": "$$",
+  "currenciesAccepted": "AED",
+  "paymentAccepted": "Cash, Credit Card",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <meta name="theme-color" content="#2a5298" media="(prefers-color-scheme: light)">
@@ -1929,7 +2118,7 @@
   "sameAs": [
     "https://www.linkedin.com/company/digital-link-technology-uae/",
     "https://www.instagram.com/digitallinktechnologyllc/",
-    "https://www.facebook.com/people/Digital-Link-Technology-LLC/100087290161175/?mibextid=ZbWKwL"
+    "https://www.facebook.com/people/Digital-Link-Technology-LLC/100087290161175/"
   ]
 }
 </script>

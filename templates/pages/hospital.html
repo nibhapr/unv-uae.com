@@ -9,43 +9,37 @@
 {% block schema_url %}{% url 'pages:hospital' %}{% endblock %}
 
 {% block extra_meta %}
-<meta name="keywords"
-  content="hospital security, AIoT hospital, healthcare security, patient protection, medical facility security, hospital surveillance, access control, Dubai hospital security, UAE healthcare solutions, Middle East hospital security">
+<!-- Primary Meta Tags -->
+<meta name="keywords" content="hospital security UAE, healthcare surveillance Dubai, medical facility protection, AIoT hospital security, patient safety systems, hospital access control, healthcare monitoring UAE, Dubai hospital security, Middle East healthcare security, smart hospital solutions">
 <meta name="author" content="Uniview">
 <meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Uniview offers comprehensive hospital security solutions in the UAE, integrating AIoT technology for enhanced safety and efficiency.">
+<meta name="revisit-after" content="7 days">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hospital Security Solutions | Uniview AIoT Hospital Systems">
 <meta property="og:description" content="Discover Uniview's comprehensive hospital security solutions featuring AIoT integration, 24/7 protection, and smart access control for healthcare facilities in the UAE.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.uniview.ae/pages/hospital">
-<meta property="og:image" content="/static/images/about-og-image.jpg">
+<meta property="og:image" content="{% static 'images/solutions/hospital/1.webp' %}">
+<meta property="og:url" content="https://www.uniview.ae/hospital">
+<meta property="og:site_name" content="Uniview UAE">
+<meta property="og:locale" content="en_AE">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hospital Security Solutions | Uniview">
-<meta name="twitter:description" content="Comprehensive hospital security solutions with AIoT integration in the UAE.">
-<meta name="twitter:image" content="/static/images/about-og-image.jpg">
-<meta name="address" content="Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira, Dubai, United Arab Emirates, P.O.Box: 123421">
-<meta name="telephone" content="+971509162488">
-<meta name="email" content="sales1@digitallink.ae">
+<meta name="twitter:description" content="Advanced hospital security solutions with AIoT integration for UAE healthcare facilities">
+<meta name="twitter:image" content="{% static 'images/solutions/hospital/1.webp' %}">
 
-{# Social Media Meta Tags #}
-<meta property="og:title" content="Hospital Security Solutions | Uniview AIoT Hospital Systems">
-<meta property="og:description"
-  content="Discover Uniview's comprehensive hospital security solutions featuring AIoT integration, 24/7 protection, and smart access control for healthcare facilities.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hospital Security Solutions | Uniview">
-<meta name="twitter:description" content="Comprehensive hospital security solutions with AIoT integration">
+<!-- Additional SEO -->
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
+<meta name="geo.position" content="25.2744;55.3009">
+<meta name="ICBM" content="25.2744, 55.3009">
 
-{# Performance & Security Meta Tags #}
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Security-Policy"
-  content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline';">
-<link rel="dns-prefetch" href="//static.uniview.com">
+<!-- Performance & Security -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline';">
 <link rel="preconnect" href="//static.uniview.com">
-
-{# Accessibility Meta Tags #}
-<meta name="theme-color" content="#00b4d8">
+<link rel="dns-prefetch" href="//static.uniview.com">
 <link rel="canonical" href="{% url 'pages:hospital' %}">
 {% endblock %}
 
@@ -56,6 +50,29 @@
       "@type": "Hospital",
       "name": "Uniview AIoT Hospital Solutions",
       "url": "{% url 'pages:hospital' %}",
+      "keywords": {
+        "@type": "keywords",
+        "keyword": [
+          "uniview uae",
+          "uniview dubai",
+          "uniview uae hospital security",
+          "uniview uae hospital solutions",
+          "uniview uae hospital systems",
+          "uniview uae hospital systems dubai",
+          "uniview uae hospital security dubai",
+          "uniview uae hospital solutions dubai",
+          "uniview uae hospital systems uae",
+          "uniview uae hospital security uae",
+          "uniview uae hospital solutions uae",
+          "uniview uae hospital security systems",
+          "uniview uae hospital security systems dubai",
+          "uniview uae hospital security systems uae",
+          "uniview uae hospital solutions systems",
+          "uniview uae hospital solutions systems dubai",
+          "uniview uae hospital solutions systems uae",
+      },
+          
+      
       "description": "Comprehensive hospital security solutions featuring AIoT integration, 24/7 protection, and smart access control for healthcare facilities in the UAE.",
       "address": {
           "@type": "PostalAddress",

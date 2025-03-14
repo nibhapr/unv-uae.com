@@ -2,9 +2,8 @@
 
 {% load static %}
 
-{% block title %}Retail Chain Solutions - Uniview{% endblock %}
-{% block meta_description %}Discover Uniview's innovative retail chain solutions featuring smart security, POS
-integration, and business analytics for enhanced store operations and customer experience in the UAE and Middle East.{% endblock %}
+{% block title %}Retail Chain Security Solutions Dubai | Uniview UAE{% endblock %}
+{% block meta_description %}Transform your retail operations with Uniview's comprehensive security solutions. Advanced POS integration, smart surveillance, and business analytics for retail chains in UAE. Get expert installation and support.{% endblock %}
 {% block og_image %}/static/images/about-og-image.jpg{% endblock %}
 {% block schema_url %}{% url 'pages:retail' %}{% endblock %}
 
@@ -12,23 +11,130 @@ integration, and business analytics for enhanced store operations and customer e
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#2563eb">
-<meta name="author" content="Uniview">
-<meta name="keywords"
-  content="retail security, store surveillance, POS integration, retail analytics, business intelligence, retail chain solutions, UAE, Middle East">
+<meta name="author" content="Uniview UAE">
+<meta name="keywords" content="retail security dubai, store surveillance uae, retail cctv installation, pos integration dubai, retail analytics uae, business intelligence solutions, retail chain security, store monitoring systems, retail loss prevention uae, smart retail solutions dubai, uniview retail security, retail camera systems uae">
 
+<!-- Open Graph Meta Tags -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Retail Chain Solutions - Uniview">
-<meta property="og:site_name" content="Uniview">
-<meta property="og:description"
-  content="Discover Uniview's innovative retail chain solutions featuring smart security, POS integration, and business analytics for enhanced store operations in the UAE.">
+<meta property="og:title" content="Retail Chain Security Solutions Dubai | Uniview UAE">
+<meta property="og:site_name" content="Uniview UAE">
+<meta property="og:description" content="Transform your retail operations with Uniview's comprehensive security solutions. Advanced POS integration, smart surveillance, and business analytics for retail chains in UAE.">
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
 <meta property="og:image" content="/static/images/about-og-image.jpg">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Retail Chain Solutions - Uniview">
-<meta name="twitter:description" content="Smart security and business intelligence solutions for retail chain stores in the UAE">
+<meta name="twitter:title" content="Retail Chain Security Solutions Dubai | Uniview UAE">
+<meta name="twitter:description" content="Advanced retail security solutions featuring POS integration, smart surveillance, and business analytics for UAE retail chains.">
 <meta name="twitter:image" content="/static/images/about-og-image.jpg">
-<meta name="twitter:site" content="@Uniview">
-<meta name="twitter:creator" content="@Uniview">
+<meta name="twitter:site" content="@UniviewUAE">
+
+<!-- Product Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Service", "Product"],
+  "@id": "https://www.unv-uae.com/retail",
+  "name": "Uniview Retail Chain Security Solutions",
+  "headline": "Retail Security Solutions in UAE",
+  "description": "Comprehensive retail security solutions featuring smart surveillance, POS integration, and business analytics for enhanced store operations in UAE",
+  "brand": {
+    "@type": "Brand",
+    "name": "Uniview"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Uniview UAE",
+    "url": "https://www.unv-uae.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.unv-uae.com/static/images/logo/logo.svg"
+    }
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "AED",
+    "seller": {
+      "@type": "Organization",
+      "name": "Uniview UAE"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.unv-uae.com/static/images/solutions/retail/1.webp",
+    "width": 1200,
+    "height": 630
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What retail security solutions does Uniview offer in UAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uniview offers comprehensive retail security solutions including smart surveillance systems, POS integration, business analytics, customer traffic analysis, and loss prevention systems tailored for retail chains in the UAE."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Uniview's POS integration work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uniview's POS integration system overlays transaction data on live and playback videos, displays detailed transaction information, and enables keyword-based record retrieval for efficient dispute resolution and fraud prevention."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What analytics features are available for retail stores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our retail analytics include customer traffic analysis, store heat mapping, customer behavior insights, and staff allocation optimization tools to enhance customer service and drive sales growth."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Uniview UAE Retail Solutions",
+  "image": "https://www.unv-uae.com/static/images/solutions/retail/1.webp",
+  "description": "Leading provider of retail security and analytics solutions in UAE",
+  "@id": "https://www.unv-uae.com/retail",
+  "url": "https://www.unv-uae.com/retail",
+  "telephone": "+971509162488",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Baghlaf Building Showroom No.5, Satellite Market, Naif, Deira",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "postalCode": "123421",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.2744,
+    "longitude": 55.3009
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
+}
+</script>
 
 <link rel="canonical" href="{{ request.build_absolute_uri }}">
 <meta http-equiv="Content-Security-Policy"
@@ -56,6 +162,34 @@ integration, and business analytics for enhanced store operations and customer e
     "name": "Uniview UAE",
     "url": "https://www.unv-uae.com",
     "logo": "https://www.unv-uae.com/static/images/logo/logo.svg",
+    "keywords": {
+      "@type": "keywords",
+      "keyword": [
+        "uniview uae",
+        "uniview dubai",
+        "uniview uae retail security",
+        "uniview uae retail security dubai",
+        "uniview uae retail security uae",
+        "uniview uae retail security solutions",
+        "uniview uae retail security solutions dubai",
+        "uniview uae retail security solutions uae",
+        "uniview uae retail security systems",
+        "uniview uae retail security systems dubai",
+        "uniview uae retail security systems uae",
+        "uniview uae retail security cameras",
+        "uniview uae retail security cameras dubai",
+        "uniview uae retail security cameras uae",
+        "uniview uae retail security cameras dubai",
+        "uniview uae retail security cameras uae",
+        "uniview uae retail security cameras dubai",
+        "uniview uae retail security cameras uae",
+        "uniview uae retail security cameras dubai",
+        "uniview uae retail security cameras uae",
+        "uniview uae retail security cameras dubai",
+        "uniview uae retail security cameras uae",
+    },
+        
+    
     "description": "Leading provider of AIoT solutions including security systems, surveillance cameras, industrial automation, smart city solutions, and IoT integration in UAE",
     "sameAs": [
         "https://www.linkedin.com/company/digital-link-technology-uae/",
