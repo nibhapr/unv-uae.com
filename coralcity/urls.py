@@ -22,7 +22,6 @@ sitemaps = {
     'categories': CategorySitemap,
     'products': ProductSitemap,
     'inquiries': InquirySitemap,
-    'inquiries': InquirySitemap,
     'newsletters': NewsletterSitemap,
     'pages': PagesSitemap,
 }

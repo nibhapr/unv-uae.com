@@ -55,3 +55,6 @@ class NewsletterSubscription(models.Model, ModelMeta):
 
     def __str__(self):
         return f"{self.given_name} {self.family_name} - {self.email}"
+
+    def get_absolute_url(self):
+        return reverse('contacts:newsletter_subscription')
