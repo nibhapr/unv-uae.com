@@ -28,7 +28,7 @@ Allow: /product/
 Allow: /category/
 Allow: /contacts/
 
-Sitemap: http://127.0.0.1:8000/sitemap.xml
+Sitemap: https://unv-uae.com/sitemap.xml
 
 # Allow major city pages
 Allow: /dubai/
