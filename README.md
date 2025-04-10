@@ -15,26 +15,26 @@ This is a Django-based web application using **Bootstrap**, **Python 3.10.4** an
 ## 🛠️ Local Setup Instructions
 
 ### 1. Clone the Project
-[`git clone https://github.com/amananilofficial/unv-uae.com.git`]
-[`cd unv-uae.com`]
+`git clone https://github.com/amananilofficial/unv-uae.com.git`
+<br> `cd unv-uae.com`
 
 ### 2. Create and Activate a Virtual Environment
 py -3.10 -m venv myenv
-[`.\myenv\Scripts\Activate.ps1`]    # For Windows PowerShell
-[`pip install -r requirements.txt`]
+`.\myenv\Scripts\Activate.ps1`    # For Windows PowerShell <br>
+`pip install -r requirements.txt`
 
 ### 3. Collect Static Files
-[`python manage.py collectstatic --clear`]
+`python manage.py collectstatic --clear`
 
 ### 4. Run Migrations
-[`python manage.py makemigrations`]
-[`python manage.py migrate`]
+`python manage.py makemigrations` <br>
+`python manage.py migrate`
 
 ### 5. Create a Superuser
-[`python manage.py createsuperuser`]
+`python manage.py createsuperuser`
 
 ### 6. Run the Development Server
-[`python manage.py runserver`]
+`python manage.py runserver`
 
 ### 🌐 Access URLs
 ### Local Development URLs
