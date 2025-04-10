@@ -1,6 +1,6 @@
 # 🌍 UNV-UAE Django Project
 
-This is a Django-based web application using **Bootstrap** **Python 3.10.4** and **SQLite3** as the default database engine. Redis is optionally supported for caching or background task handling. The project runs locally and is also deployed at [https://unv-uae.com](https://unv-uae.com).
+This is a Django-based web application using **Bootstrap**, **Python 3.10.4** and **SQLite3** as the default database engine. Redis is optionally supported for caching or background task handling. The project runs locally and is also deployed at [https://unv-uae.com](https://unv-uae.com).
 
 ---
 
