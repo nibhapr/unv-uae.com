@@ -19,7 +19,7 @@ This is a Django-based web application using **Bootstrap**, **Python 3.10.4** an
 <br> `cd unv-uae.com`
 
 ### 2. Create and Activate a Virtual Environment
-py -3.10 -m venv myenv
+`py -3.10 -m venv myenv` <br>
 `.\myenv\Scripts\Activate.ps1`    # For Windows PowerShell <br>
 `pip install -r requirements.txt`
 
@@ -40,10 +40,6 @@ py -3.10 -m venv myenv
 ### Local Development URLs
 Main Site: http://127.0.0.1:8000/ <br>
 Admin Panel: http://127.0.0.1:8000/admin/
-
-### Production (Live Site)
-Main Site: https://unv-uae.com/ <br>
-Admin Panel: https://unv-uae.com/admin/
 
 ### 📞 Contact Information
 
