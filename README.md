@@ -1,6 +1,6 @@
 # 🌍 UNV-UAE Django Project
 
-This is a Django-based web application using **Python 3.10.4** and **SQLite3** as the default database engine. Redis is optionally supported for caching or background task handling. The project runs locally and is also deployed at [https://unv-uae.com](https://unv-uae.com).
+This is a Django-based web application using **Bootstrap** **Python 3.10.4** and **SQLite3** as the default database engine. Redis is optionally supported for caching or background task handling. The project runs locally and is also deployed at [https://unv-uae.com](https://unv-uae.com).
 
 ---
 
@@ -15,8 +15,8 @@ This is a Django-based web application using **Python 3.10.4** and **SQLite3** a
 ## 🛠️ Local Setup Instructions
 
 ### 1. Clone the Project
-git clone https://github.com/your-username/unv-uae.git
-cd unv-uae
+git clone https://github.com/amananilofficial/unv-uae.com.git
+cd unv-uae.com
 
 ### 2. Create and Activate a Virtual Environment
 py -3.10 -m venv myenv
