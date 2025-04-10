@@ -45,12 +45,12 @@ python manage.py runserver
 **Main Site: **https://unv-uae.com/ <br>
 **Admin Panel: **https://unv-uae.com/admin/
 
-### **👤 Author
+### 📞 Contact Information
 
-### 📞 Contact
-- **Gmail:** 📧 amananiloffical@gmail.com
-- **Phone:** [📱 +91 7892939127](tel:+9717892939127)  
-- **WhatsApp:** <a href="https://wa.me/9717892939127"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" width="20"/></a>  
-- **LinkedIn:** <a href="https://www.linkedin.com/in/amananilofficial"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20"/></a>  
-- **Instagram:** <a href="https://instagram.com/amananilofficial"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20"/></a>
+- 📧 **Gmail:** [amananiloffical@gmail.com](mailto:amananiloffical@gmail.com)  
+- 📱 **Phone:** [+91 7892939127](tel:+917892939127)  
+- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" width="20"/> **WhatsApp:** [Chat on WhatsApp](https://wa.me/917892939127)  
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20"/> **LinkedIn:** [amananilofficial](https://www.linkedin.com/in/amananilofficial)  
+- <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20"/> **Instagram:** [@amananilofficial](https://instagram.com/amananilofficial)
+
 
