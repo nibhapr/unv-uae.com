@@ -38,12 +38,12 @@ python manage.py runserver
 
 ### 🌐 Access URLs
 ### Local Development URLs
-**Main Site: **http://127.0.0.1:8000/ <br>
-**Admin Panel: **http://127.0.0.1:8000/admin/
+Main Site: http://127.0.0.1:8000/ <br>
+Admin Panel: http://127.0.0.1:8000/admin/
 
 ### Production (Live Site)
-**Main Site: **https://unv-uae.com/ <br>
-**Admin Panel: **https://unv-uae.com/admin/
+Main Site: https://unv-uae.com/ <br>
+Admin Panel: https://unv-uae.com/admin/
 
 ### 📞 Contact Information
 
