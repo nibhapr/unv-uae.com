@@ -48,7 +48,7 @@ Admin Panel: https://unv-uae.com/admin/
 ### 📞 Contact Information
 
 - 📧 **Gmail:** [amananiloffical@gmail.com](mailto:amananiloffical@gmail.com)  
-- 📱 **Phone:** [+91 7892939127](tel:+917892939127)  
+- 📱 **Phone:** [`+91 7892939127`](tel:+917892939127) *(clickable on mobile)*
 - <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" width="20"/> **WhatsApp:** [+91 7892939127](https://wa.me/917892939127)  
 - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20"/> **LinkedIn:** [amananilofficial](https://www.linkedin.com/in/amananilofficial)  
 - <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20"/> **Instagram:** [@amananilofficial](https://instagram.com/amananilofficial)
