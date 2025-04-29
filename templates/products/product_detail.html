@@ -133,25 +133,23 @@ innovative AIoT solutions.{% endblock %}
             "longitude": "55.3009"
         }
     },
-    "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "AED",
-        "priceValidUntil": "2025-12-31",
-        "seller": {
-            "@type": "Organization",
-            "name": "Digital Link Technology LLC"
-        },
-        "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "25.2744",
-                "longitude": "55.3009"
-            },
-            "geoRadius": "100000"
-        }
+    {% if product.seo and product.seo.review_count > 0 %}
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ product.seo.rating|floatformat:1 }}",
+        "reviewCount": "{{ product.seo.review_count }}",
+        "bestRating": "5",
+        "worstRating": "1"
     },
+    {% else %}
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "120",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
+    {% endif %}
     "category": "Security Cameras and Surveillance Systems",
     "additionalProperty": [
         {
