@@ -95,22 +95,34 @@
     content="{% block twitter_description %}Leading provider of security cameras in UAE. Expert installation & support.{% endblock %}">
   <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/about-og-image.jpg' %}{% endblock %}">
 
-  <!-- Product Schema with All Categories -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Uniview UAE",
-    "description": "Leading provider of security camera solutions in UAE",
-    "url": "{{ request.build_absolute_uri }}",
-    "logo": "{% static 'images/logo/logo.svg' %}",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "UAE",
-      "addressLocality": "Dubai"
-    },
-  }
+  <!-- Product Schema with All Categories -->  
+   <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Uniview UAE",
+        "description": "Leading provider of security camera solutions in UAE",
+        "url": "{{ request.build_absolute_uri }}",
+        "logo": "/static/images/logo/logo.svg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Baghlaf Building Shop No.11 Satellite Market, Naif, Deira",
+            "addressCountry": "UAE",
+            "addressLocality": "Dubai",
+            "postalCode": "123241"
+        },
+        "telephone": "+971509162488",
+        "email": "sales1@digitallink.ae",
+        "foundingDate": "2015",
+        "numberOfEmployees": "10-50",
+        "sameAs": [
+            "https://www.linkedin.com/company/digital-link-technology-uae/",
+            "https://www.instagram.com/digitallinktechnologyllc/",
+            "https://www.facebook.com/people/Digital-Link-Technology-LLC/100087290161175/"
+        ]
+    }
   </script>
+
 
   <!-- Schema Markup (JSON-LD for Structured Data) -->
   <script type="application/ld+json">
@@ -235,8 +247,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
   <!-- Enhanced Security Headers -->
-  <meta http-equiv="Content-Security-Policy" 
-        content="default-src 'self' https:; 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; 
                  script-src 'self' 'unsafe-inline' https:; 
                  style-src 'self' 'unsafe-inline' https:; 
                  img-src 'self' data: https:; 
@@ -244,8 +255,7 @@
                  connect-src 'self' https:;
                  frame-src 'self' https:;
                  object-src 'none';">
-  <meta http-equiv="Permissions-Policy" 
-        content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
   <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
 
@@ -995,16 +1005,17 @@ Commercial Security Dubai, Industrial Security Cameras UAE, Uniview Corporate So
     padding: 10px 20px;
     z-index: 9999;
     text-decoration: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   /* Print Styles */
   @media print {
+
     .nav-utilities,
     .navbar-toggler {
       display: none !important;
     }
-    
+
     a[href]:after {
       content: " (" attr(href) ")";
     }
