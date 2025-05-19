@@ -17,7 +17,7 @@ from django.template.loader import render_to_string  # Import render_to_string
 # Display all products
 def home(request):
     products = Product.objects.filter(
-        is_available=True).order_by('-created_at')
+        is_available=True).order_by('created_at')
 
     # Pagination
     paginator = Paginator(products, 6)
