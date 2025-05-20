@@ -120,16 +120,18 @@ IP cameras, NVR systems, and surveillance equipment. Official UNV distributor in
 <section class="products-section" aria-label="Products Grid">
   <div class="container">
     <div class="products-grid" role="grid">
-      {% if products %}
-      {% for product in products %}
-      {% if forloop.counter <= 8 %} <article class="product-card" role="gridcell">
-        <div class="product-image">
-          <img src="{{ product.photo_main.url }}" alt="{{ product.name }}" loading="lazy" width="300" height="200">
-        </div>
-        <div class="product-details">
-          <h2 class="product-name">{{ product.name }}</h2>
-        </div>
+      {% if products %}      {% for product in products %}
+      {% if forloop.counter <= 8 %}
+      <a href="{% url 'products:product_detail' product.slug %}" class="text-decoration-none">
+        <article class="product-card" role="gridcell">
+          <div class="product-image">
+            <img src="{{ product.photo_main.url }}" alt="{{ product.name }}" loading="lazy" width="300" height="200">
+          </div>
+          <div class="product-details">
+            <h2 class="product-name">{{ product.name }}</h2>
+          </div>
         </article>
+      </a>
         {% endif %}
         {% endfor %}
         {% else %}

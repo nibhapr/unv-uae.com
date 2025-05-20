@@ -144,7 +144,9 @@
     .product-card:hover {
         transform: translateY(-5px);
         box-shadow: var(--shadow-md);
-    }      .product-image {
+    }
+
+    .product-image {
         width: 100%;
         height: auto;
     }
@@ -311,7 +313,8 @@
         outline: none;
     }
 
-    /* Mobile Responsiveness */    @media (min-width: 992px) {
+    /* Mobile Responsiveness */
+    @media (min-width: 992px) {
         .category-sidebar {
             position: sticky;
             top: 20px;
@@ -319,13 +322,16 @@
             height: calc(100vh - 40px);
             overflow-y: auto;
         }
+
         .category-sidebar::-webkit-scrollbar {
             width: 4px;
         }
+
         .category-sidebar::-webkit-scrollbar-thumb {
             background: var(--primary-color);
             border-radius: 4px;
         }
+
         .category-sidebar::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
@@ -437,15 +443,16 @@
                 </button>
                 <div class="category-sidebar" style="color: black;">
                     <h3 class="category-header">Browse Categories</h3>
-            
+
                     <!-- Add search input -->
                     <div class="category-search mb-4">
                         <input type="text" id="categorySearch" class="form-control" placeholder="Search categories..."
                             aria-label="Search categories">
                     </div>
-            
+
                     <div class="categories-list">
-                        <a href="{% url 'products:category_list' %}" class="category-item {% if not category %}active{% endif %}">
+                        <a href="{% url 'products:category_list' %}"
+                            class="category-item {% if not category %}active{% endif %}">
                             <div class="category-content">
                                 <i class="fas fa-th-large category-icon" style="color: black;"></i>
                                 <div class="category-text">
@@ -455,7 +462,7 @@
                             </div>
                             <span class="category-count">{{ total_products_count }}</span>
                         </a>
-            
+
                         {% for cat in categories %}
                         <a href="{% url 'products:category' cat.slug %}"
                             class="category-item {% if cat.slug == category.slug %}active{% endif %}">
@@ -484,19 +491,23 @@
                     <div style="width: 50px; height: 3px; background: #2193b0; margin-top: 15px;"></div>
                 </h2>
                 <div class="row" id="productsGrid">
-                    {% if all_products %}
-                        {% for product in all_products %}
-                        <div class="col-md-6 col-lg-4 mb-4">
+                    {% if all_products %} {% for product in all_products %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <a href="{% url 'products:product_detail' product.slug %}" class="text-decoration-none">
                             <div class="card h-100 product-card">
                                 {% if product.photo_main %}
-                                <img src="{{ product.photo_main.url }}" class="card-img-top product-image" alt="{{ product.name }}" loading="lazy">
+                                <img src="{{ product.photo_main.url }}" class="card-img-top product-image"
+                                    alt="{{ product.name }}" loading="lazy">
                                 {% else %}
-                                <img src="{% static 'images/no-image.jpg' %}" class="card-img-top product-image" alt="No image available" loading="lazy">
+                                <img src="{% static 'images/no-image.jpg' %}" class="card-img-top product-image"
+                                    alt="No image available" loading="lazy">
                                 {% endif %}
-                                <div class="card-body d-flex flex-column">                                    <span class="text-muted small text-uppercase mb-2">{{ product.category.name }}</span>
+                                <div class="card-body d-flex flex-column"> <span
+                                        class="text-muted small text-uppercase mb-2">{{ product.category.name }}</span>
                                     <h5 class="product-title">{{ product.name }}</h5>
                                     <span class="text-muted small mb-2"><i class="far fa-clock"></i> Created: {{ product.created_at|date:"F j, Y" }}</span>
-                                    <p class="product-description flex-grow-1">{{ product.description|truncatechars:100 }}</p>                                    <div class="d-flex justify-content-end align-items-center">
+                                    <p class="product-description flex-grow-1">{{ product.description|truncatechars:100 }}</p>
+                                    <div class="d-flex justify-content-end align-items-center">
                                         <div class="product-meta">
                                             <span class="text-muted me-2"><i class="fas fa-star"></i> 4.5</span>
                                             <span class="text-muted"><i class="fas fa-comment"></i> 12</span>
@@ -504,17 +515,19 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        {% endfor %}
+                        </a>
+                    </div>
+                    {% endfor %}
                     {% else %}
-                        <div class="col-12 text-center py-5">
-                            <div style="background: white; border-radius: 15px; padding: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                                <i class="fas fa-box-open mb-3" style="font-size: 3rem; color: #2193b0;"></i>
-                                <p style="color: #666; font-size: 1.3rem; margin-bottom: 0;">
-                                    No products found.
-                                </p>
-                            </div>
+                    <div class="col-12 text-center py-5">
+                        <div
+                            style="background: white; border-radius: 15px; padding: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                            <i class="fas fa-box-open mb-3" style="font-size: 3rem; color: #2193b0;"></i>
+                            <p style="color: #666; font-size: 1.3rem; margin-bottom: 0;">
+                                No products found.
+                            </p>
                         </div>
+                    </div>
                     {% endif %}
                 </div>
 
@@ -523,7 +536,8 @@
                     <ul class="pagination justify-content-center">
                         {% if all_products.has_previous %}
                         <li class="page-item">
-                            <a class="page-link" href="?page={{ all_products.previous_page_number }}" aria-label="Previous">
+                            <a class="page-link" href="?page={{ all_products.previous_page_number }}"
+                                aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
@@ -669,7 +683,7 @@
         document.querySelectorAll('.product-card').forEach(card => {
             card.closest('.col-md-6').style.display = 'block';
         });
-        
+
         // Update active state
         document.querySelectorAll('.category-item').forEach(item => {
             item.classList.remove('active');
