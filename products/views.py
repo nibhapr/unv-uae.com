@@ -20,7 +20,7 @@ def home(request):
         is_available=True).order_by('created_at')
 
     # Pagination
-    paginator = Paginator(products, 6)
+    paginator = Paginator(products, 8)
     page = request.GET.get('page', 1)
     try:
         paged_products = paginator.page(page)
@@ -56,17 +56,45 @@ def search(request):
     keywords = request.GET.get('keywords', '').strip()
     category_name = request.GET.get('category', '').strip()
 
-    # Filter products based on keywords (title or description) and category name
-    if keywords:
-        queryset = queryset.filter(
-            Q(description__icontains=keywords) | Q(title__icontains=keywords)
-        )
+    # Handle percentage search
+    if '%' in keywords:
+        # Remove the % symbol and search for the number
+        percentage = keywords.replace('%', '').strip()
+        if percentage.isdigit():
+            # Search for products with the percentage in name or description
+            queryset = queryset.filter(
+                Q(name__icontains=percentage) |
+                Q(description__icontains=percentage) |
+                Q(name__icontains=f"{percentage}%") |
+                Q(description__icontains=f"{percentage}%")
+            )
+    else:
+    # Regular keyword search
+        if keywords:
+            queryset = queryset.filter(
+                Q(description__icontains=keywords) |
+                Q(name__icontains=keywords)
+            )
+
     if category_name:
         queryset = queryset.filter(category__name__iexact=category_name)
+    
+    # Order by created_at in ascending order (oldest first)
+    queryset = queryset.order_by('created_at')
+
+    # Pagination
+    paginator = Paginator(queryset, 12)  # Show 12 products per page
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
     context = {
-        'products': queryset,
-        'values': request.GET,  # To preserve search input in form fields
+        'products': products,
+        'values': request.GET,
         'categories': categories,
     }
     return render(request, 'products/search.html', context)
@@ -76,10 +104,10 @@ def search(request):
 def category(request, category_id):
     category = get_object_or_404(Category, pk=category_id)
     products = Product.objects.filter(
-        category=category, is_available=True).order_by('-created_at')
+        category=category, is_available=True).order_by('created_at')
 
     # Pagination
-    paginator = Paginator(products, 6)
+    paginator = Paginator(products, 8)
     page = request.GET.get('page', 1)
     try:
         paged_products = paginator.page(page)
@@ -169,7 +197,8 @@ class ProductDetailView(DetailView):
 # Get products by category (JSON response)
 def get_products_by_category(request, slug):
     category = get_object_or_404(Category, slug=slug)
-    products = Product.objects.filter(category=category, is_available=True).values('id', 'name', 'slug', 'photo_main')
+    products = Product.objects.filter(category=category, is_available=True).values(
+        'id', 'name', 'slug', 'photo_main')
     return JsonResponse(list(products), safe=False)
 
 
@@ -181,7 +210,7 @@ def category_view(request, category_id=None):
 
     # Get all available products
     all_products = Product.objects.filter(
-        is_available=True).order_by('-created_at')
+        is_available=True).order_by('created_at')
 
     # If category_id is provided, filter products by category
     if category_id:
@@ -203,8 +232,9 @@ def category_view(request, category_id=None):
 # Category detail view (by slug)
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)
-    products = Product.objects.filter(category=category, is_available=True).order_by('-created_at')
-    
+    products = Product.objects.filter(
+        category=category, is_available=True).order_by('created_at')
+
     # Pagination
     paginator = Paginator(products, 12)  # Show 12 products per page
     page = request.GET.get('page')
@@ -214,7 +244,7 @@ def category_detail(request, slug):
         products = paginator.page(1)
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
-        
+
     context = {
         'category': category,
         'products': products,
@@ -234,7 +264,7 @@ class CategoryListView(ListView):
         context = super().get_context_data(**kwargs)
         # Get all products - using is_available instead of is_active
         products = Product.objects.filter(
-            is_available=True).order_by('-created_at')
+            is_available=True).order_by('created_at')
 
         context.update({
             'category': {
@@ -282,7 +312,7 @@ class CategoryDetailView(DetailView):
         context['all_products'] = Product.objects.filter(
             category=category,
             is_available=True
-        ).order_by('-created_at')
+        ).order_by('created_at')
 
         return context
 

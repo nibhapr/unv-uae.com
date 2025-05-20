@@ -14,7 +14,8 @@ industrial automation solutions, smart city technologies, and healthcare IoT int
   content="AIoT products, industrial automation, smart city solutions, IoT integration, Uniview products, Dubai, UAE, Middle East">
 <meta name="author" content="Uniview">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Explore innovative AIoT solutions in Dubai, UAE. Contact us for industrial automation, smart city technologies, and healthcare IoT integrations.">
+<meta name="description"
+  content="Explore innovative AIoT solutions in Dubai, UAE. Contact us for industrial automation, smart city technologies, and healthcare IoT integrations.">
 
 <!-- Open Graph / Social Media Meta Tags -->
 <meta property="og:type" content="website">
@@ -112,87 +113,14 @@ industrial automation solutions, smart city technologies, and healthcare IoT int
 }
 </script>
 
-<style media="screen">
-  .view-details-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    pointer-events: auto;
-    z-index: 10;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    will-change: background-color;
-  }
-
-  .view-details-btn:hover {
-    background-color: #0056b3;
-  }
-
-  .view-details-btn:active {
-    background-color: #003f7f;
-  }
-
-  .view-details-btn:focus {
-    outline-color: #0056b3;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-  }
-
-  @media print {
-    .view-details-btn {
-      display: none;
-    }
-  }
-
-  .card {
-    position: relative;
-    z-index: 1;
-  }
-
-  .card-body {
-    position: relative;
-    z-index: 2;
-  }
-
-  .card-img-top {
-    position: relative;
-    z-index: 1;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
-
-  .card-img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 2;
-  }
-
-  @media print {
-
-    .search_box_section,
-    .pagination {
-      display: none;
-    }
-  }
-</style>
-
-<section class="home_banner_area hero" id="about" role="banner" aria-label="Page Header">
-  <div class="banner_inner d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="banner_content d-flex flex-md-row flex-column">
-            <div class="banner-left text-md-right">
-              <h1 class="text-uppercase">products</h1>
-            </div>
-          </div>
+<!-- Hero Banner -->
+<section class="bg-primary text-white py-5" id="about" role="banner" aria-label="Page Header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="py-5">
+          <h1 class="display-4 text-uppercase fw-bold mb-3">Explore Our Products</h1>
+          <p class="lead mb-0">Discover innovative AIoT solutions for your business needs</p>
         </div>
       </div>
     </div>
@@ -200,21 +128,23 @@ industrial automation solutions, smart city technologies, and healthcare IoT int
 </section>
 
 <!-- Search Box Section -->
-<section class="search_box_section py-5" role="search" aria-label="Product Search">
+<section class="bg-white py-5 shadow-sm" role="search" aria-label="Product Search">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 id="search-heading" style="color: #1a365d;">Search for Products</h2>
-        <form method="get" action="{% url 'products:search' %}" class="search-form needs-validation" role="search"
+        <h2 class="mb-3 text-black" id="search-heading">Find Your Perfect Solution</h2>
+        <p class="text-muted mb-4">Search through our extensive catalog of over 500+ innovative AIoT products</p>
+        <form method="get" action="{% url 'products:search' %}" class="needs-validation" role="search"
           aria-labelledby="search-heading" novalidate>
-          <div class="input-group mb-3">
-            <label for="search-input" class="sr-only" style="color: #1a365d;">Search by Product Name</label>
-            <input type="text" id="search-input" class="form-control" name="keywords"
-              placeholder="Search by Product Name" value="{{ request.GET.keywords|escape }}"
-              aria-label="Search products" required minlength="2" autocomplete="off">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="submit" aria-label="Submit search">Search</button>
-            </div>
+          <div class="input-group mb-3 mx-auto" style="max-width: 700px;">
+            <label for="search-input" class="visually-hidden">Search by Product Name or Percentage</label>
+            <input type="text" id="search-input" class="form-control form-control-lg rounded-start" name="keywords"
+              placeholder="Search by Product Name or Enter Percentage (e.g. 50%)"
+              value="{{ request.GET.keywords|escape }}" aria-label="Search products" required minlength="1"
+              autocomplete="off">
+            <button class="btn btn-primary px-4" type="submit" aria-label="Submit search">
+              <i class="fas fa-search me-2"></i> Search
+            </button>
           </div>
         </form>
       </div>
@@ -222,52 +152,62 @@ industrial automation solutions, smart city technologies, and healthcare IoT int
   </div>
 </section>
 
-<section id="appartments" class="py-5" aria-label="Product Listings">
-  <div class="container my-5">
+<!-- Products Section -->
+<section class="bg-light py-5" aria-label="Product Listings">
+  <div class="container">
     <div class="row">
-      <div class="col-12">
-        <h2 class="text-center mb-4" style="color: #1a365d;">Available products</h2>
+      <div class="col-12 text-center">
+        <h2 class="mb-3 text-black">Available Products</h2>
+        <p class="text-muted mb-5">Browse our selection of high-quality AIoT solutions</p>
       </div>
     </div>
-    <div class="row">
 
+    <div class="row">
       {% if products %}
       {% for product in products %}
       <div class="col-md-4 col-lg-3 mb-4">
-        <article class="card products-preview h-100">
-          <img class="card-img-top" src="{{ product.photo_main.url }}" alt="{{ product.name }}" loading="lazy"
-            width="300" height="200" decoding="async" fetchpriority="high">
-          <div class="card-img-overlay"></div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" role="presentation">
-                <tbody>
-                  <tr>
-                    <th scope="row">Name of the Product</th>
-                    <td>{{ product.name }}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Category of the Product</th>
-                    <td>{{ product.category.name }}</td>
-                  </tr>
-                </tbody>
-              </table>
+        <a href="{% url 'products:product_detail' product.slug %}" class="text-decoration-none">
+          <article class="card h-100 shadow-sm transition-hover">
+            <div class="position-relative overflow-hidden">
+              <img class="card-img-top" src="{{ product.photo_main.url }}" alt="{{ product.name }}" loading="lazy"
+                width="300" height="200" decoding="async" fetchpriority="high">
             </div>
-            <a href="{% url 'products:product_detail' product.slug %}" class="view-details-btn"
-              aria-label="View details for {{ product.name }}">
-              View Details
-            </a>
-          </div>
-        </article>
+            <div class="card-body">
+              <h5 class="text-primary text-center mb-3 fw-bold">{{ product.name }}</h5>
+              <div class="table-responsive">
+                <table class="table table-bordered" role="presentation">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="bg-light">Product</th>
+                      <td>{{ product.name }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="bg-light">Category</th>
+                      <td>{{ product.category.name }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="text-center mt-3">
+                <span class="btn btn-sm btn-outline-primary">View Details</span>
+              </div>
+            </div>
+          </article>
+        </a>
       </div>
       {% endfor %}
       {% else %}
       <div class="col-md-12">
-        <p class="text-center" role="alert" style="color: #1a365d;">No products available at the moment.</p>
+        <div class="bg-white p-5 text-center rounded shadow-sm">
+          <i class="fas fa-search fa-3x text-primary mb-3"></i>
+          <p class="lead mb-2">No products available at the moment.</p>
+          <p class="text-muted">Please try a different search term or check back later.</p>
+        </div>
       </div>
       {% endif %}
     </div>
 
+    <!-- Pagination -->
     <div class="row">
       <div class="col-md-12">
         {% if products.has_other_pages %}
@@ -276,7 +216,7 @@ industrial automation solutions, smart city technologies, and healthcare IoT int
             {% if products.has_previous %}
             <li class="page-item">
               <a href="?page={{ products.previous_page_number }}{% if request.GET.keywords %}&keywords={{ request.GET.keywords|urlencode }}{% endif %}"
-                class="page-link" rel="prev" aria-label="Go to previous page">
+                class="page-link rounded-pill px-3" rel="prev" aria-label="Go to previous page">
                 &laquo; Previous
               </a>
             </li>
@@ -284,23 +224,23 @@ industrial automation solutions, smart city technologies, and healthcare IoT int
             {% for i in products.paginator.page_range %}
             {% if products.number == i %}
             <li class="page-item active">
-              <a class="page-link">{{ i }}</a>
+              <a class="page-link rounded-pill">{{ i }}</a>
             </li>
             {% else %}
             <li class="page-item">
               <a href="?page={{ i }}{% if request.GET.keywords %}&keywords={{ request.GET.keywords|urlencode }}{% endif %}"
-                class="page-link">{{ i }}</a>
+                class="page-link rounded-pill">{{ i }}</a>
             </li>
             {% endif %}
             {% endfor %}
             {% if products.has_next %}
             <li class="page-item">
               <a href="?page={{ products.next_page_number }}{% if request.GET.keywords %}&keywords={{ request.GET.keywords|urlencode }}{% endif %}"
-                class="page-link">Next &raquo;</a>
+                class="page-link rounded-pill px-3">Next &raquo;</a>
             </li>
             {% else %}
             <li class="page-item disabled">
-              <a class="page-link">Next &raquo;</a>
+              <a class="page-link rounded-pill px-3">Next &raquo;</a>
             </li>
             {% endif %}
           </ul>

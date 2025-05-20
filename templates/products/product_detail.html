@@ -1050,25 +1050,67 @@ innovative AIoT solutions.{% endblock %}
                     <h5 class="description-title">Product Overview</h5>
                     <div class="name-content">
                         {{ product.name }}
-                    </div>
+                    </div>                    
+                    {% load custom_filters %}
+
                     <div class="description-content">
                         <ul class="key-points">
-                            {% for point in product.description|split:'.' %}
-                                {% if point|strip %}
-                                    <li><i class="fas fa-check-circle"></i> {{ point|strip }}.</li>
-                                {% endif %}
-                            {% endfor %}
+                            {% if product.description %}
+                                {% for line in product.description|split:"\n"|slice:":3" %}
+                                    {% if line|strip %}
+                                        <li><i class="fas fa-check-circle" style="color: #000000;"></i>
+                                            <span style="color: #000000;">{{ line|strip }}</span>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                <li><i class="fas fa-info-circle" style="color: #000000;"></i>
+                                    <span style="color: #000000;">No description available</span>
+                                </li>
+                            {% endif %}
                         </ul>
                     </div>
+
+
                     <!-- Key features section -->
                     <div class="key-features mt-4">
                         <h6 class="features-title">Key Features</h6>
                         <ul class="features-list">
                             {% if product.max_resolution %}
-                            <li><i class="fas fa-check-circle"></i> {{ product.max_resolution }} Resolution</li>
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">{{ product.max_resolution }} Resolution</span></li>
+                            {% endif %}
+                            {% if product.sensor %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Sensor: {{ product.sensor }}</span></li>
                             {% endif %}
                             {% if product.day_night %}
-                            <li><i class="fas fa-check-circle"></i> {{ product.day_night }} Vision</li>
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Day/Night: {{ product.day_night }}</span></li>
+                            {% endif %}
+                            {% if product.wdr %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">WDR: {{ product.wdr }}</span></li>
+                            {% endif %}
+                            {% if product.video_compression %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Video: {{ product.video_compression }}</span></li>
+                            {% endif %}
+                            {% if product.frame_rate %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Frame Rate: {{ product.frame_rate }}</span></li>
+                            {% endif %}
+                            {% if product.focal_length %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Lens: {{ product.focal_length }}</span></li>
+                            {% endif %}
+                            {% if product.adjustment_angle %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Adjustment Angle: {{ product.adjustment_angle }}</span></li>
+                            {% endif %}
+                            {% if product.shutter %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Shutter: {{ product.shutter }}</span></li>
+                            {% endif %}
+                            {% if product.power %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Power: {{ product.power }}</span></li>
+                            {% endif %}
+                            {% if product.dimensions %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Size: {{ product.dimensions }}</span></li>
+                            {% endif %}
+                            {% if product.weight %}
+                            <li><i class="fas fa-check-circle" style="color: #000000;"></i> <span style="color: #000000;">Weight: {{ product.weight }}</span></li>
                             {% endif %}
                         </ul>
                     </div>
